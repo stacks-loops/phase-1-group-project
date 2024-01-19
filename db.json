@@ -1,11 +1,12 @@
 { 
-    "featured-events" :
+    "featured-events" : [
 {
     "id" : 1,
     "name" : "Goosemas",
     "artist" : "Goose",
     "venue" : "Factory Underground",
-    "date" : "December 25th 2024"
+    "date" : "December 25th 2024",
+    "image" : "assets/goosemas.jpg"
 }
 
 
@@ -14,5 +15,5 @@
 
 
 
-
+                         ]
 }
