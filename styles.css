@@ -7,3 +7,16 @@ body {
 h1 {
     color: black;
 }
+
+.concert-card {
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  text-align: center;
+}
+
+.concert-card img {
+    max-width: 100%;
+    max-height: 100%;
+}

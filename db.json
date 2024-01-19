@@ -7,7 +7,24 @@
     "venue" : "Factory Underground",
     "date" : "December 25th 2024",
     "image" : "assets/goosemas.jpg"
+},
+{
+    "id" : 2,
+    "name" : "Kenny's Band",
+    "artist" : "Kennaayyy",
+    "venue" : "Flatiron",
+    "date" : "January 19th 2024",
+    "image" : "assets/goosemas.jpg"
+},
+{
+    "id" : 3,
+    "name" : "Goosemas",
+    "artist" : "Goose",
+    "venue" : "Factory Underground",
+    "date" : "December 25th 2024",
+    "image" : "assets/goosemas.jpg"
 }
+
 
 
 
