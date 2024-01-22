@@ -1,4 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {})
 
 function createArray(info){
     const jamArray = info
@@ -91,6 +91,6 @@ function renderFeaturedEvents(featuredEventsArray) {
 
 
 
-}
+    })
 
-// })
+}
