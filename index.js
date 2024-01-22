@@ -78,19 +78,29 @@ function renderFeaturedEvents(featuredEventsArray) {
     const likeButton = document.createElement('button')
     const likeCounter = document.createElement('p')
     
-    likeCounter.textContent = featuredObj.like
+   // likeCounter.textContent = featuredObj.like
     featName.textContent = featuredObj.name
     featArtist.textContent = featuredObj.artist
     featVenue.textContent = featuredObj.venue
     featDate.textContent = featuredObj.date
     featImg.src = featuredObj.image
+    // likeCounter.className = "like"
 
         featuredDiv.append(featName, featArtist, featVenue, featDate, featImg, likeCounter, likeButton)
         featuredCon.appendChild(featuredDiv)
 
+localStorage.setItem('likes', 0);
+likeCounter.innerHTML = localStorage.getItem('likes');
+
+likeButton.addEventListener('click', addLike());
+
+function addLike() {
+    localStorage.setItem('likes', parseInt(localStorage.getItem('likes'))+ 1);
+    likeCounter.innerHTML = localStorage.getItem('likes');
+}
+addLike;
 
 
+    })
 
 }
-
-// })
