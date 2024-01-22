@@ -1,4 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {})
 
 function createArray(info){
     const jamArray = info
@@ -67,7 +67,7 @@ fetch('http://localhost:3000/featured-events')
 function renderFeaturedEvents(featuredEventsArray) {
     const featuredCon = document.querySelector('#featured-events')
 
-    featuredEventsArray.forEach((featuredObj) => {
+    featuredEventsArray.forEach((featuredObj, index) => {
         const featuredDiv = document.createElement('div')
         featuredDiv.className = "concert-card"
     const featName = document.createElement('h2')
@@ -77,30 +77,34 @@ function renderFeaturedEvents(featuredEventsArray) {
     const featImg = document.createElement('img')
     const likeButton = document.createElement('button')
     const likeCounter = document.createElement('p')
+
+    const localStorageKey = `likes_${index}`
+    let likes = parseInt(localStorage.getItem(localStorageKey), 10) || 0
+
     
-   // likeCounter.textContent = featuredObj.like
+    likeCounter.textContent = likes
     featName.textContent = featuredObj.name
     featArtist.textContent = featuredObj.artist
     featVenue.textContent = featuredObj.venue
     featDate.textContent = featuredObj.date
     featImg.src = featuredObj.image
-    // likeCounter.className = "like"
+
+    likeButton.textContent = 'Like this Show'
+    likeButton.addEventListener('click', () => {
+        likes++
+        localStorage.setItem(localStorageKey, likes)
+        likeCounter.textContent = likes.toString()
+    })
 
         featuredDiv.append(featName, featArtist, featVenue, featDate, featImg, likeCounter, likeButton)
         featuredCon.appendChild(featuredDiv)
 
-localStorage.setItem('likes', 0);
-likeCounter.innerHTML = localStorage.getItem('likes');
-
-likeButton.addEventListener('click', addLike());
-
-function addLike() {
-    localStorage.setItem('likes', parseInt(localStorage.getItem('likes'))+ 1);
-    likeCounter.innerHTML = localStorage.getItem('likes');
-}
-addLike;
-
-
+       
     })
-
+    
 }
+
+
+
+
+
