@@ -7,7 +7,8 @@
     "artist" : "Goose",
     "venue" : "Factory Underground",
     "date" : "December 25th 2024",
-    "image" : "assets/goosemas.jpg"
+    "image" : "assets/goosemas.jpg",
+    "like" : "0"
 },
 {
     "id" : 2,
@@ -15,7 +16,8 @@
     "artist" : "Kennaayyy",
     "venue" : "Flatiron",
     "date" : "January 19th 2024",
-    "image" : "assets/goosemas.jpg"
+    "image" : "assets/goosemas.jpg",
+    "like" : "0"
 },
 {
     "id" : 3,
@@ -23,7 +25,8 @@
     "artist" : "Goose",
     "venue" : "Factory Underground",
     "date" : "December 25th 2024",
-    "image" : "assets/goosemas.jpg"
+    "image" : "assets/goosemas.jpg",
+    "like" : "0"
 }
 
 
