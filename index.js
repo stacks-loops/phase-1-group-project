@@ -5,6 +5,18 @@ fetch("https://www.jambase.com/jb-api/v1/events/id/jambase:10917320?apikey=93f5c
 .then(data => console.log(data))
 
 
+let eventButton = document.getElementById("myBtn")
+
+const init = () => {
+    eventButton.addEventListener('click', function() {
+    alert('Clicked!')
+});
+}
+
+document.addEventListener("DOMContentLoaded", init);
+
+
+
 
 fetch('http://localhost:3000/featured-events')
 .then(resp => resp.json())
