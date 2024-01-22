@@ -1,7 +1,58 @@
-fetch("https://www.jambase.com/jb-api/v1/events?apikey=93f5cc80-f6d0-4f03-a4c7-fce468ed501d")
-.then(resp => resp.json())
-.then(data => console.log(data))
+// document.addEventListener("DOMContentLoaded", function() {
 
+function createArray(info){
+    const jamArray = info
+    console.log(jamArray)
+    return jamArray
+}
+
+function renderJamEvents(jamArray) {
+
+let jamContainer = document.querySelector("#jam-cards")
+
+jamArray.forEach((jamObj) => {
+
+   
+    const jamDiv = document.createElement('div')
+    jamDiv.className = "jam-information"
+
+    const jamEventName = document.createElement('h2')
+    const jamArtistName = document.createElement('h2')
+    const jamDate = document.createElement('h3')
+    const jamVenue = document.createElement('h3')
+    const jamImage = document.createElement('img')
+
+    console.log(jamObj.image)
+
+    jamEventName.innerText = jamObj.name
+    jamArtistName.innerText = jamObj.performer[0].name
+    jamDate.innerText = jamObj.endDate
+    jamVenue.innerText = jamObj.location.name
+    jamImage.src = jamObj.image
+
+    jamDiv.append(jamEventName, jamArtistName, jamDate, jamVenue, jamImage)
+    jamContainer.appendChild(jamDiv)
+
+    })
+}
+
+//Button work
+let eventButton = document.getElementById("myBtn")
+
+
+//Button event listener
+const init = () => {
+    eventButton.addEventListener('click', function() {
+        fetch("https://www.jambase.com/jb-api/v1/events?apikey=93f5cc80-f6d0-4f03-a4c7-fce468ed501d")
+        .then(resp => resp.json())
+        .then(data => renderJamEvents(data.events))
+    
+        // alert('Clicked!')
+                                                    });
+                    }
+document.addEventListener("DOMContentLoaded", init);
+
+//JSON Fetch
 fetch('http://localhost:3000/featured-events')
 .then(resp => resp.json())
 .then(featuredEventsArr => renderFeaturedEvents(featuredEventsArr))
@@ -15,8 +66,6 @@ fetch('http://localhost:3000/featured-events')
 //append the container to the featured-events div 
 function renderFeaturedEvents(featuredEventsArray) {
     const featuredCon = document.querySelector('#featured-events')
-
-    
 
     featuredEventsArray.forEach((featuredObj) => {
         const featuredDiv = document.createElement('div')
@@ -41,3 +90,5 @@ function renderFeaturedEvents(featuredEventsArray) {
     })
 
 }
+
+// })
