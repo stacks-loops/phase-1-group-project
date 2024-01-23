@@ -7,11 +7,9 @@ function createArray(info){
 }
 
 function renderJamEvents(jamArray) {
-
 let jamContainer = document.querySelector("#jam-cards")
 
 jamArray.forEach((jamObj) => {
-
    
     const jamDiv = document.createElement('div')
     jamDiv.className = "jam-information"
@@ -92,6 +90,7 @@ function renderFeaturedEvents(featuredEventsArray) {
     featImg.src = featuredObj.image
 
     likeButton.textContent = 'Like this Show'
+    likeButton.id = "like-button"
     likeButton.addEventListener('click', () => {
         likes++
         localStorage.setItem(localStorageKey, likes)
