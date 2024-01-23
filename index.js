@@ -16,8 +16,8 @@ jamArray.forEach((jamObj) => {
     const jamDiv = document.createElement('div')
     jamDiv.className = "jam-information"
 
-    const jamEventName = document.createElement('h2')
-    const jamArtistName = document.createElement('h2')
+    const jamEventName = document.createElement('h3')
+    const jamArtistName = document.createElement('h3')
     const jamDate = document.createElement('h3')
     const jamVenue = document.createElement('h3')
     const jamImage = document.createElement('img')
@@ -107,12 +107,12 @@ function renderFeaturedEvents(featuredEventsArray) {
 }
 
 //RESET BUTTON => Will reset ALL likes in localStorage to 0
-
 function resetBtns () {
     localStorage.clear()
     localStorage.setItem(localStorageKey, likes)
     likeCounter.textContent = likes.toString()
 }
+
 
 
 
