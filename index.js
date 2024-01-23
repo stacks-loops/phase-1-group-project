@@ -113,6 +113,14 @@ function resetBtns () {
     likeCounter.textContent = likes.toString()
 }
 
+//Up key goes to top of the page
+function goTop(e) {
+    if (e.keyCode === 38) {
+      document.documentElement.scrollTop = 0;
+      }
+    }
+  
+  document.addEventListener('keydown', goTop);
 
 
 
