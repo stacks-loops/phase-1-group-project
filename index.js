@@ -7,11 +7,9 @@ function createArray(info){
 }
 
 function renderJamEvents(jamArray) {
-
 let jamContainer = document.querySelector("#jam-cards")
 
 jamArray.forEach((jamObj) => {
-
    
     const jamDiv = document.createElement('div')
     jamDiv.className = "jam-information"
