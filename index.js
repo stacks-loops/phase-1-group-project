@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", init);
 fetch('http://localhost:3000/featured-events')
 .then(resp => resp.json())
 .then(featuredEventsArr => renderFeaturedEvents(featuredEventsArr))
+
 // taking in the array from our local fetch
 // creating a container that will point to the div featured-events 
 // can style the look of each event here
@@ -64,6 +65,7 @@ fetch('http://localhost:3000/featured-events')
 // set the appropriate attribute of each variable to the data in the object
 // append the data to the container
 //append the container to the featured-events div 
+
 function renderFeaturedEvents(featuredEventsArray) {
     const featuredCon = document.querySelector('#featured-events')
 
@@ -103,6 +105,16 @@ function renderFeaturedEvents(featuredEventsArray) {
     })
     
 }
+
+//RESET BUTTON => Will reset ALL likes in localStorage to 0
+
+function resetBtns () {
+    localStorage.clear()
+    localStorage.setItem(localStorageKey, likes)
+    likeCounter.textContent = likes.toString()
+}
+
+
 
 
 
