@@ -27,34 +27,14 @@
   ],
   "comments": [
     {
-      "id": 1,
+      "text": "That was heckin awesome",
       "eventId": 1,
-      "text": "Great show!"
+      "id": 1
     },
     {
-      "text": "",
-      "eventId": 3,
+      "text": "asdsdf",
+      "eventId": 2,
       "id": 2
-    },
-    {
-      "text": "It was awesome",
-      "eventId": 1,
-      "id": 3
-    },
-    {
-      "text": "excellent",
-      "eventId": 2,
-      "id": 4
-    },
-    {
-      "text": "great",
-      "eventId": 2,
-      "id": 5
-    },
-    {
-      "text": "liked it",
-      "eventId": 3,
-      "id": 6
     }
   ]
 }

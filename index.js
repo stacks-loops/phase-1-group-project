@@ -171,6 +171,7 @@ function renderComments(eventId, comments) {
     .catch((error) => {
         console.log('Error is:', error)
     })
+    
 }
 
 
