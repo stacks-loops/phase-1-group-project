@@ -35,14 +35,18 @@ body {
 
 h1 {
     text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+
 }
 
 .concert-card {
-  display: inline-block;
   width: 200px;
   height: 300px;
   margin: 10px;
   text-align: center;
+  float: left;
+  white-space: nowrap;
   
 }
 
@@ -76,7 +80,22 @@ img {
 }
 #jam-cards h3 {
     text-align: center;
+    font-size: 12px;
+    
 }
+
+#reset-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: darkgoldenrod;
+    color: black;
+    border-radius: 16px;
+    padding: 10px 20px;
+    font-weight: 900;
+}
+
+
 #myBtn {
     display: block;
     margin: 0 auto;
