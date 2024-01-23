@@ -119,7 +119,6 @@ function goTop(e) {
       document.documentElement.scrollTop = 0;
       }
     }
-  
   document.addEventListener('keydown', goTop);
 
 
