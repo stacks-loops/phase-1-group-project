@@ -1,10 +1,10 @@
 // document.addEventListener("DOMContentLoaded", function() {})
 
-// function createArray(info){
-//     const jamArray = info
-//     console.log(jamArray)
-//     return jamArray
-// }
+function createArray(info){
+    const jamArray = info
+    console.log(jamArray)
+    return jamArray
+}
 
 function renderJamEvents(jamArray) {
 let jamContainer = document.querySelector("#jam-cards")
@@ -186,7 +186,6 @@ function renderComments(eventId, comments) {
     })
     
 }
-
 
 
 //}
