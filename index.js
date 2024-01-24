@@ -48,8 +48,25 @@ const init = () => {
         // alert('Clicked!')
                                                     });
                     }
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", init) ;
+// trying to have the reset button work. 52-69
+    const resetButton = document.getElementById('reset-button');
+    resetButton.addEventListener('click', resetBtns);
+    
+    function resetBtns () {
+        localStorage.clear();
+        const concertCards = document.querySelectorAll('.concert-card');
+        if (concertCards.length > 0) {
+            concertCards.forEach((card, index) => {
+                const localStorageKey = `likes_${index}`;
+                const likeCounter = card.querySelector('.like-counter');
 
+            if (likeCounter) {
+                localStorage.setItem(localStorageKey, 0);
+            }
+        });
+        }
+    }
 //JSON Fetch
 fetch('http://localhost:3000/featured-events')
 .then(resp => resp.json())
@@ -127,11 +144,7 @@ function renderFeaturedEvents(featuredEventsArray) {
 }
 
 //RESET BUTTON => Will reset ALL likes in localStorage to 0
-function resetBtns () {
-    localStorage.clear()
-    localStorage.setItem(localStorageKey, likes)
-    likeCounter.textContent = likes.toString()
-}
+
 
 //Up key goes to top of the page
 function goTop(e) {
@@ -140,6 +153,7 @@ function goTop(e) {
       }
     }
   document.addEventListener('keydown', goTop);
+
 
 //append an event from upcoming to the db.json and have it persist
 function saveComment(commentObj, comments) {
@@ -177,4 +191,5 @@ function renderComments(eventId, comments) {
 
 
 //}
+
 
