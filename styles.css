@@ -135,5 +135,8 @@ p {
     background-color: darkgoldenrod;
     border-radius: 10px;
     font-weight: 900;
+    margin-bottom: 20px;
 }
-
+.comments {
+    border-radius: 10px;
+}
