@@ -1,10 +1,10 @@
 // document.addEventListener("DOMContentLoaded", function() {})
 
-function createArray(info){
-    const jamArray = info
-    console.log(jamArray)
-    return jamArray
-}
+// function createArray(info){
+//     const jamArray = info
+//     console.log(jamArray)
+//     return jamArray
+// }
 
 function renderJamEvents(jamArray) {
 let jamContainer = document.querySelector("#jam-cards")
@@ -27,6 +27,7 @@ jamArray.forEach((jamObj) => {
     jamDate.innerText = jamObj.endDate
     jamVenue.innerText = jamObj.location.name
     jamImage.src = jamObj.image
+    
 
     jamDiv.append(jamEventName, jamArtistName, jamDate, jamVenue, jamImage)
     jamContainer.appendChild(jamDiv)
@@ -36,7 +37,6 @@ jamArray.forEach((jamObj) => {
 
 //Button work
 let eventButton = document.getElementById("myBtn")
-
 
 //Button event listener
 const init = () => {
@@ -104,12 +104,31 @@ function renderFeaturedEvents(featuredEventsArray) {
         likeCounter.textContent = likes.toString()
     })
 
-        featuredDiv.append(featName, featArtist, featVenue, featDate, featImg, likeCounter, likeButton)
+    const comments = document.createElement('div')
+    const commentInput = document.createElement('input')
+    const commentButton = document.createElement('button')
+
+    comments.className = 'comments'
+    commentInput.type = 'text'
+    commentInput.placeholder = "Thoughts on the show?"
+    commentButton.textContent = "Post"
+
+    comments.append(commentInput, commentButton)
+    commentButton.addEventListener('click', () => {
+            const commentText = commentInput.value
+            const commentObj = {
+                text: commentText,
+                eventId: featuredObj.id
+            }
+  saveComment(commentObj, comments)
+    })
+
+        featuredDiv.append(featName, featArtist, featVenue, featDate, featImg, likeCounter, likeButton, comments)
         featuredCon.appendChild(featuredDiv)
 
-       
+        renderComments(featuredObj.id, comments)
     })
-    
+
 }
 
 //RESET BUTTON => Will reset ALL likes in localStorage to 0
@@ -133,4 +152,44 @@ function goTop(e) {
       }
     }
   document.addEventListener('keydown', goTop);
+
+
+//append an event from upcoming to the db.json and have it persist
+function saveComment(commentObj, comments) {
+    fetch('http://localhost:3000/comments', {
+      method: 'POST',
+      headers: {
+   'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(commentObj)
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data)
+        renderComments(commentObj.eventId, comments)
+     
+      })
+  }
+
+function renderComments(eventId, comments) {
+    fetch(`http://localhost:3000/comments?eventId=${eventId}`)
+    .then((resp) => resp.json())
+    .then((commentsTwo) => {
+            commentsTwo.forEach((comment) => {
+                const commentElement = document.createElement('p')
+                commentElement.textContent = comment.text
+                comments.appendChild(commentElement)
+
+        })
+    })
+    .catch((error) => {
+        console.log('Error is:', error)
+    })
+    
+}
+
+
+
+//}
+
 
