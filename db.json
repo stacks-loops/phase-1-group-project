@@ -45,6 +45,36 @@
       "text": "",
       "eventId": 2,
       "id": 4
+    },
+    {
+      "text": "goofy ",
+      "eventId": 2,
+      "id": 5
+    },
+    {
+      "text": "this persists after reload",
+      "eventId": 3,
+      "id": 6
+    },
+    {
+      "text": "",
+      "eventId": 3,
+      "id": 7
+    },
+    {
+      "text": "",
+      "eventId": 3,
+      "id": 8
+    },
+    {
+      "text": "sdf",
+      "eventId": 3,
+      "id": 9
+    },
+    {
+      "text": "sdf",
+      "eventId": 3,
+      "id": 10
     }
   ]
 }
