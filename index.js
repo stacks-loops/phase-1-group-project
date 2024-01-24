@@ -164,8 +164,8 @@ function saveComment(commentObj, comments) {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data)
         renderComments(commentObj.eventId, comments)
+        commentObj.textContent - ""
      
       })
   }
