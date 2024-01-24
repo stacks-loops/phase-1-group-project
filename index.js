@@ -1,10 +1,10 @@
-// document.addEventListener("DOMContentLoaded", function() {})
+document.addEventListener("DOMContentLoaded", function() {})
 
-// function createArray(info){
-//     const jamArray = info
-//     console.log(jamArray)
-//     return jamArray
-// }
+function createArray(info){
+    const jamArray = info
+    console.log(jamArray)
+     return jamArray
+}
 
 function renderJamEvents(jamArray) {
 let jamContainer = document.querySelector("#jam-cards")
@@ -49,24 +49,14 @@ const init = () => {
                                                     });
                     }
 document.addEventListener("DOMContentLoaded", init) ;
-// trying to have the reset button work. 52-69
-    const resetButton = document.getElementById('reset-button');
-    resetButton.addEventListener('click', resetBtns);
     
-    function resetBtns () {
-        localStorage.clear();
-        const concertCards = document.querySelectorAll('.concert-card');
-        if (concertCards.length > 0) {
-            concertCards.forEach((card, index) => {
-                const localStorageKey = `likes_${index}`;
-                const likeCounter = card.querySelector('.like-counter');
+    
 
-            if (likeCounter) {
-                localStorage.setItem(localStorageKey, 0);
-            }
-        });
-        }
-    }
+
+
+
+    
+
 //JSON Fetch
 fetch('http://localhost:3000/featured-events')
 .then(resp => resp.json())
@@ -97,7 +87,7 @@ function renderFeaturedEvents(featuredEventsArray) {
 
     const localStorageKey = `likes_${index}`
     let likes = parseInt(localStorage.getItem(localStorageKey), 10) || 0
-
+        
     
     likeCounter.textContent = likes
     featName.textContent = featuredObj.name
@@ -138,11 +128,31 @@ function renderFeaturedEvents(featuredEventsArray) {
 
         renderComments(featuredObj.id, comments)
     })
-
+    //return likes 
 }
 
 //RESET BUTTON => Will reset ALL likes in localStorage to 0
 
+    function resetLikes() {
+        window.localStorage.clear();
+        const concertCards = document.querySelectorAll('.concert-card');
+        if (concertCards.length > 0) {
+            concertCards.forEach ((featuredObj, index) => {
+                const localStorageKey = `likes_${index}`   
+                const likeCounterZero = featuredObj.querySelector('.like-counter')
+                if (likeCounter ) {
+                    localStorage.setItem(localStorageKey, 0) 
+                    likeCounterZero.innerText = 0
+
+                    const likeButton = document.querySelector('#like-button')
+                    const fakeClick = new Event('click')
+                    likeButton.dispatchEvent(fakeClick)
+                }
+            })
+        }
+              
+    }
+ 
 
 //Up key goes to top of the page
 function goTop(e) {
