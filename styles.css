@@ -1,5 +1,7 @@
+
+
 html {
-    font-family: Arial, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 
 body {
@@ -105,6 +107,7 @@ img {
     border-radius: 16px;
     padding: 10px 20px;
     font-weight: 900;
+    box-shadow: 69px 69px 69px black;
    
     
 }
@@ -137,3 +140,12 @@ p {
     font-weight: 900;
 }
 
+#comments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 200px;
+    margin-bottom: 100px;
+
+
+}

@@ -1,7 +1,7 @@
 {
   "featured-events": [
     {
-      "id": "1",
+      "id": 1,
       "artist": "Goose",
       "venue": "Factory Underground",
       "date": "December 25th 2024",
@@ -9,7 +9,7 @@
       "like": "0"
     },
     {
-      "id": "2",
+      "id": 2,
       "artist": "Louis The Child",
       "venue": "Red Rocks",
       "date": "May 19th 2024",
@@ -17,7 +17,7 @@
       "like": "0"
     },
     {
-      "id": "3",
+      "id": 3,
       "artist": "Bruce Springsteen",
       "venue": "Flatiron School (Denver)",
       "date": "Januray 27th 2024",
@@ -27,79 +27,54 @@
   ],
   "comments": [
     {
-      "text": "dope",
+      "text": "here",
       "eventId": 2,
-      "id": "1"
-    },
-    {
-      "text": "epic",
-      "eventId": 2,
-      "id": "2"
+      "id": 1
     },
     {
       "text": "",
       "eventId": 2,
-      "id": "3"
+      "id": 2
     },
     {
       "text": "",
       "eventId": 2,
-      "id": "4"
+      "id": 3
     },
     {
       "text": "",
       "eventId": 2,
-      "id": "5"
+      "id": 4
+    },
+    {
+      "text": "goofy ",
+      "eventId": 2,
+      "id": 5
+    },
+    {
+      "text": "this persists after reload",
+      "eventId": 3,
+      "id": 6
     },
     {
       "text": "",
-      "eventId": 2,
-      "id": "6"
+      "eventId": 3,
+      "id": 7
     },
     {
       "text": "",
-      "eventId": 2,
-      "id": "7"
+      "eventId": 3,
+      "id": 8
     },
     {
-      "text": "",
-      "eventId": 2,
-      "id": "8"
+      "text": "sdf",
+      "eventId": 3,
+      "id": 9
     },
     {
-      "text": "",
-      "eventId": 2,
-      "id": "9"
-    },
-    {
-      "id": "f716",
-      "text": "AAHhh",
-      "eventId": "2"
-    },
-    {
-      "id": "8fe3",
-      "text": "cool",
-      "eventId": "3"
-    },
-    {
-      "id": "0823",
-      "text": "neat",
-      "eventId": "2"
-    },
-    {
-      "id": "a705",
-      "text": "neat",
-      "eventId": "2"
-    },
-    {
-      "id": "ad16",
-      "text": "what",
-      "eventId": "1"
-    },
-    {
-      "id": "59ec",
-      "text": "what",
-      "eventId": "1"
+      "text": "sdf",
+      "eventId": 3,
+      "id": 10
     }
   ]
 }
