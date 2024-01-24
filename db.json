@@ -1,38 +1,40 @@
-
-{ 
-    "featured-events" : [
 {
-    "id" : 1,
-    "artist" : "Goose",
-    "venue" : "Factory Underground",
-    "date" : "December 25th 2024",
-    "image" : "assets/goosemas.jpg",
-    "like" : "0"
-},
-{
-    "id" : 2,
-    "artist" : "Louis The Child",
-    "venue" : "Red Rocks",
-    "date" : "May 19th 2024",
-    "image" : "assets/ltc.jpg",
-    "like" : "0"
-},
-{
-    "id" : 3,
-    "artist" : "Bruce Springsteen",
-    "venue" : "Flatiron School (Denver)",
-    "date" : "Januray 27th 2024",
-    "image" : "assets/bruce.jpg",
-    "like" : "0"
+  "featured-events": [
+    {
+      "id": 1,
+      "artist": "Goose",
+      "venue": "Factory Underground",
+      "date": "December 25th 2024",
+      "image": "assets/goosemas.jpg",
+      "like": "0"
+    },
+    {
+      "id": 2,
+      "artist": "Louis The Child",
+      "venue": "Red Rocks",
+      "date": "May 19th 2024",
+      "image": "assets/ltc.jpg",
+      "like": "0"
+    },
+    {
+      "id": 3,
+      "artist": "Bruce Springsteen",
+      "venue": "Flatiron School (Denver)",
+      "date": "Januray 27th 2024",
+      "image": "assets/bruce.jpg",
+      "like": "0"
+    }
+  ],
+  "comments": [
+    {
+      "text": "That was heckin awesome",
+      "eventId": 1,
+      "id": 1
+    },
+    {
+      "text": "asdsdf",
+      "eventId": 2,
+      "id": 2
+    }
+  ]
 }
-
-
-
-
-
-
-
-
-                         ]
-}
-
