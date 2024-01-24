@@ -113,18 +113,18 @@ function renderFeaturedEvents(featuredEventsArray) {
 }
 
 //RESET BUTTON => Will reset ALL likes in localStorage to 0
-function resetLikes() {
-   const concertCards = document.querySelector('.concert-card');
+// function resetLikes() {
+//    const concertCards = document.querySelector('.concert-card');
 
 
-    concertCards.forEach((likes, index)) => 
-    {
+//     concertCards.forEach((likes, index)) => 
+//     {
 
 
-    }
+//     }
  
-   }
-resetLikes();
+//    }
+// resetLikes();
 
 //Up key goes to top of the page
 function goTop(e) {
