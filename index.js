@@ -1,10 +1,10 @@
 // document.addEventListener("DOMContentLoaded", function() {})
 
-function createArray(info){
-    const jamArray = info
-    console.log(jamArray)
-    return jamArray
-}
+// function createArray(info){
+//     const jamArray = info
+//     console.log(jamArray)
+//     return jamArray
+// }
 
 function renderJamEvents(jamArray) {
 let jamContainer = document.querySelector("#jam-cards")
@@ -137,8 +137,6 @@ function renderFeaturedEvents(featuredEventsArray) {
         featuredCon.appendChild(featuredDiv)
 
         renderComments(featuredObj.id, comments)
-
-
     })
 
 }
@@ -171,6 +169,7 @@ function saveComment(commentObj, comments) {
      
       })
   }
+
 function renderComments(eventId, comments) {
     fetch(`http://localhost:3000/comments?eventId=${eventId}`)
     .then((resp) => resp.json())
