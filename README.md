@@ -13,16 +13,16 @@ Genre - API
 
 There will be an upvote button section that persists
 
-Three Event listeners
+Three Event listeners (click, keydown and DOM content loaded)
 - Like button
-- Dropdown?
-- Music note symbol that shows venue name when moused over
+- Dropdown comment box.
+- At the bottom of the page if you press the pgup arrow, it will take you to the top of the page.
 - Onload landing page shows a few concerts upcoming
 
 Array iteration
 - iterate through team concert objects and put them on loading page
 
 
-CORE Feature - Render a concert info card after selecting that concert
+CORE Feature - Render concert info card after selecting the upcoming events.
 
 
