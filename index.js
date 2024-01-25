@@ -1,4 +1,6 @@
+
 document.addEventListener("DOMContentLoaded", function() {})
+
 
 function createArray(info){
     const jamArray = info
@@ -85,6 +87,8 @@ function renderFeaturedEvents(featuredEventsArray) {
     const likeButton = document.createElement('button')
     const likeCounter = document.createElement('p')
 
+    likeCounter.id = "like-counter";
+
     const localStorageKey = `likes_${index}`
     let likes = parseInt(localStorage.getItem(localStorageKey), 10) || 0
         
@@ -120,7 +124,7 @@ function renderFeaturedEvents(featuredEventsArray) {
                 text: commentText,
                 eventId: featuredObj.id
             }
-  saveComment(commentObj, comments)
+    saveComment(commentObj, comments)
     })
 
         featuredDiv.append(featName, featArtist, featVenue, featDate, featImg, likeCounter, likeButton, comments)
@@ -134,25 +138,27 @@ function renderFeaturedEvents(featuredEventsArray) {
 //RESET BUTTON => Will reset ALL likes in localStorage to 0
 
     function resetLikes() {
+        console.log('reseting likes');
         window.localStorage.clear();
         const concertCards = document.querySelectorAll('.concert-card');
         if (concertCards.length > 0) {
-            concertCards.forEach ((featuredObj, index) => {
+            concertCards.forEach ((featuredDiv, index) => {
                 const localStorageKey = `likes_${index}`   
-                const likeCounterZero = featuredObj.querySelector('.like-counter')
-                if (likeCounter ) {
+                const likeCounterZero = featuredDiv.querySelector('#like-counter')
+                if (likeCounterZero) {
                     localStorage.setItem(localStorageKey, 0) 
                     likeCounterZero.innerText = 0
 
-                    const likeButton = document.querySelector('#like-button')
-                    const fakeClick = new Event('click')
-                    likeButton.dispatchEvent(fakeClick)
+                    //const likeButton = document.querySelector('#like-button')
+                    //const fakeClick = new Event('click')
+                    //likeButton.dispatchEvent(fakeClick)
                 }
-            })
+            });
         }
               
     }
- 
+    let resetButton = document.getElementById('reset-button');
+    resetButton.addEventListener('click', resetLikes);
 
 //Up key goes to top of the page
 function goTop(e) {
@@ -196,6 +202,7 @@ function renderComments(eventId, comments) {
     })
     
 }
+document.addEventListener("DOMContentLoaded", function() {})
 
 
 
