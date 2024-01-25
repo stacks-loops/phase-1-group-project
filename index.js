@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {})
 
 
 
-
 // function createArray(info){
 //     const jamArray = info
 //     console.log(jamArray)
@@ -340,6 +339,7 @@ function renderFeaturedEvents(featuredEventsArray) {
                 const localStorageKey = `likes_${index}`   
 
                 const likeCounterZero = featuredDiv.querySelector('#like-counter')
+
                 if (likeCounterZero) {
                     localStorage.setItem(localStorageKey, 0) 
                     likeCounterZero.innerText = 0
