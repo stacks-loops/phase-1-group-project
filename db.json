@@ -1,7 +1,7 @@
 {
   "featured-events": [
     {
-      "id": 1,
+      "id": "1",
       "artist": "Goose",
       "venue": "Factory Underground",
       "date": "December 25th 2024",
@@ -9,7 +9,7 @@
       "like": "0"
     },
     {
-      "id": 2,
+      "id": "2",
       "artist": "Louis The Child",
       "venue": "Red Rocks",
       "date": "May 19th 2024",
@@ -17,7 +17,7 @@
       "like": "0"
     },
     {
-      "id": 3,
+      "id": "3",
       "artist": "Bruce Springsteen",
       "venue": "Flatiron School (Denver)",
       "date": "Januray 27th 2024",
@@ -26,6 +26,10 @@
     }
   ],
   "comments": [
-
+    {
+      "id": "d002",
+      "text": "great!",
+      "eventId": "2"
+    }
   ]
 }
